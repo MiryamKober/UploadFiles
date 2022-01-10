@@ -1,0 +1,11 @@
+<div class="container">
+  <input type="text" class="form-control" placeholder="Enter file name" [(ngModel)]="fileName">
+  <input type="file" #file placeholder="Choose file" (change)="uploadFile(file.files)" style="display:none;">
+  <div (click)="file.click()" class="upload-wrapper margin-top-2">
+    <img src="../../assets/upload.png" class="icon">
+    <label>Upload File</label>
+  </div>
+  <label *ngIf="currentFile" class="text-info message">File uploaded</label>
+  <button type="button" [disabled]="!fileName || !currentFile " class="btn btn-info pointer margin-top-2"
+    (click)="send()">Send</button>
+</div>

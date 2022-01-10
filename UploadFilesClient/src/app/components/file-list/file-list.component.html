@@ -1,0 +1,9 @@
+<div *ngIf="(fileList$ | async).length" class="circle">{{(fileList$ | async).length}}</div>
+<div *ngIf="(fileList$ | async).length" class="container border border-info">
+    <div *ngFor="let file of (fileList$ | async)" class="file-wrapper border-bottom border-info">
+        <div class="d-flex">
+            <span> {{ getFileName(file.path)}}</span>
+            <app-download [fileUrl]="file.path"></app-download>
+        </div>
+    </div>
+</div>

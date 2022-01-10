@@ -1,0 +1,48 @@
+.upload {
+    font-weight: bold;
+    color: #28a745;
+    margin-left: 15px;
+    line-height: 36px;
+}
+
+.icon {
+    height: 50px;
+    width: 50px;
+}
+
+.container {
+    margin-top: 300px;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    align-items: center;
+    justify-content: center;
+}
+
+.upload-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+button {
+    width: 350px;
+}
+
+button:disabled,
+button[disabled] {
+    cursor: not-allowed;
+    pointer-events: all !important;
+}
+
+label {
+    margin-inline-start: 20px;
+    font-size: 20px;
+}
+
+.message {
+    font-size: 16px;
+    margin-inline-end: 140px;
+}
+.margin-top-2 {
+    margin-top: 20px;
+}
